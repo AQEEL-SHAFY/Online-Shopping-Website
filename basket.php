@@ -1,21 +1,32 @@
 <?php
-$pagename="template"; //Create and populate a variable called $pagename
+session_start();
+include("db.php");
+$pagename="Smart Basket"; //Create and populate a variable called $pagename
 echo "<link rel=stylesheet type=text/css href=mystylesheet.css>"; //Call in stylesheet
 echo "<title>".$pagename."</title>"; //display name of the page as window title
 echo "<body>";
 include ("headfile.html"); //include header layout file 
 echo "<h4>".$pagename."</h4>"; //display name of the page on the web page
-//display random text
-echo "<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-labore et dolore magna aliqua. Non consectetur a erat nam at lectus urna. Cras pulvinar mattis nunc sed 
-blandit libero volutpat sed cras. Nunc aliquet bibendum enim facilisis gravida neque convallis a cras. 
-Nunc consequat interdum varius sit. Nam aliquam sem et tortor consequat. Magna sit amet purus gravida. Non 
-sodales neque sodales ut etiam sit. Tortor consequat id porta nibh venenatis. Ornare arcu odio ut sem 
-nulla pharetra diam. Tincidunt ornare massa eget egestas purus. Pulvinar mattis nunc sed blandit libero 
-volutpat sed. Nulla malesuada pellentesque elit eget. Varius quam quisque id diam vel quam elementum 
-pulvinar. Aliquet eget sit amet tellus cras adipiscing enim eu turpis. Vestibulum lectus mauris ultrices 
-eros in. Faucibus in ornare quam viverra. Hac habitasse platea dictumst vestibulum rhoncus. Parturient 
-montes nascetur ridiculus mus. Dui accumsan sit amet nulla facilisi morbi tempus iaculis urna.";
+
+
+//capture the ID of selected product using the POST method and the $_POST superglobal variable
+//and store it in a new local variable called $newprodid
+$newprodid=$_POST['h_prodid'];
+
+//capture the required quantity of selected product using the POST method and $_POST superglobal variable 
+//and store it in a new local variable called $reququantity
+
+$reququantity=$_POST['p_quantity'];  
+//Display id of selected product
+echo "<p>ID of selected product: ".$newprodid;
+//Display quantity of selected product\
+echo "<p>Quantity of selected product: ".$reququantity;
+
+//create a new cell in the basket session array. Index this cell with the new product id.
+//Inside the cell store the required product quantity 
+$_SESSION['basket'][$newprodid]=$reququantity;
+echo "<p><b>1 item added</b>";
+
 include("footfile.html"); //include head layout
 echo "</body>";
 ?>
