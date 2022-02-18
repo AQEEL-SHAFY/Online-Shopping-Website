@@ -1,2 +1,2 @@
 # Online-Shopping-Website
-Hometeq Website :grinning:
+Hometeq Website Using PHP/HTML/CSS :grinning:
