@@ -1,3 +1,2 @@
 # Online-Shopping-Website
-Hometeq Website Using PHP/HTML/CSS :grinning:
-![CHEESE!](hiveSmall.jpg)
+Hometeq Website Using PHP/HTML/CSS ;
