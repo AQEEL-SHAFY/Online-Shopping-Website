@@ -8,6 +8,15 @@ echo "<body>";
 include ("headfile.html"); //include header layout file 
 echo "<h4>".$pagename."</h4>"; //display name of the page on the web page
 
+//if the value of the product id to be deleted (which was posted through the hidden field) is set
+//capture the posted product id and assign it to a local variable $delprodid
+//unset the cell of the session for this posted product id variable
+//display a "1 item removed from the basket" messag
+if(ISSET($_POST['rem_button'])){
+	$delprodid=$_POST['S_prodid'];
+	unset($_SESSION['basket'][$delprodid]);
+	echo "1 item removed from the basket";
+}
 if(ISSET($_POST['h_prodid'])){
 
 //capture the ID of selected product using the POST method and the $_POST superglobal variable
@@ -47,6 +56,7 @@ echo"<th>Product Name</th>";
 echo"<th>Product Price</th>";
 echo"<th>Product Quantity</th>";
 echo"<th>Subtotal</th>";
+echo"<th>Remove Product</th>";
 echo"</tr>";
 
     foreach($_SESSION['basket'] as $index=>$value){
@@ -59,6 +69,11 @@ echo"</tr>";
 			echo "<th>".$value."</th>";
 			$subtotal=$arrayp["prodPrice"]*$value;	
 			echo "<th>$".$subtotal."</th>";
+
+            echo "<form action=basket.php method=POST>";
+            echo "<th><input type=submit name=rem_button value='Remove' class='btn'></button></th>";
+            echo "<input type=hidden name=S_prodid value=".$index.">";	
+        echo "</form>";
 			// echo "<th>$".$subtotal."</th>";
           
 		echo"</tr>";  		
@@ -74,7 +89,7 @@ echo"</tr>";
     //increase total by adding the subtotal to the current total
 }
 echo "<tr>";
-    echo "<th colspan='3'>Total</th>";
+    echo "<th colspan='4'>Total</th>";
     echo "<th>$".$total."</th>";
 echo"</tr>";
 echo"</table>";
@@ -91,7 +106,7 @@ echo"</table>";
             echo "<th>Subtotal</th>";
         echo"</tr>";
         echo "<tr>";
-            echo "<th colspan='3'>Total</th>";
+            echo "<th colspan='4'>Total</th>";
             echo "<th>$".$total."</th>";
         echo"</tr>";
         echo "</table>";
