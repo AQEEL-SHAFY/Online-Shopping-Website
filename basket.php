@@ -97,7 +97,10 @@ echo"</table>";
         echo "</table>";
     }
     echo "<br>";
-echo "<a href='clearbasket.php'>CLEAR BASKET</a>";
+echo "<br><a href='clearbasket.php'>CLEAR BASKET</a>";
+echo "<br><br>New hometeq customers: <a href='signup.php'>Sign Up</a>";
+echo "<br><br>Returning hometeq customers: <a href='login.php'>Login In</a>";
+
 include("footfile.html"); //include head layout
 echo "</body>";
 ?>
