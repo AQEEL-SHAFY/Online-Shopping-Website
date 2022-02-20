@@ -37,7 +37,11 @@ else{
 $total=0;
 $subtotal=0;
 //Create a HTML table with a header to display the content of the shopping basket 
-echo "<table id='baskettable'>";
+
+//i.e. the product name, the price, the selected quantity and the subtotal
+if (ISSET($_SESSION['basket'])) 
+{
+    echo "<table id='baskettable'>";
 echo"<tr>";
 echo"<th>Product Name</th>";
 echo"<th>Product Price</th>";
@@ -45,9 +49,6 @@ echo"<th>Product Quantity</th>";
 echo"<th>Subtotal</th>";
 echo"</tr>";
 
-//i.e. the product name, the price, the selected quantity and the subtotal
-if (ISSET($_SESSION['basket'])) 
-{
     foreach($_SESSION['basket'] as $index=>$value){
         $SQL="SELECT prodName, prodPrice, prodQuantity FROM Product WHERE prodId=".$index;
         $exeSQL=mysqli_query($conn, $SQL) or die (mysqli_error($conn));
@@ -81,10 +82,22 @@ echo"</table>";
     }
     else
     {
-        echo"<p>Empty Basket";
+        echo"<p>Empty Basket ";
+        echo "<table id='baskettable'>";
+        echo "<tr>";
+            echo "<th>Product Name</th>";
+            echo "<th>Price</th>";
+            echo "<th>Quantity</th>";
+            echo "<th>Subtotal</th>";
+        echo"</tr>";
+        echo "<tr>";
+            echo "<th colspan='3'>Total</th>";
+            echo "<th>$".$total."</th>";
+        echo"</tr>";
+        echo "</table>";
     }
-
-    
+    echo "<br>";
+echo "<a href='clearbasket.php'>CLEAR BASKET</a>";
 include("footfile.html"); //include head layout
 echo "</body>";
 ?>
