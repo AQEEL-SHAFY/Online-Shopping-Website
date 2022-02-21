@@ -3,4 +3,4 @@ Hometeq Website Using PHP/HTML/CSS ;
 
 
 
-![CHEESE](websiteScreenshot.png);
+![CHEESE](WebsiteScreenshot.png);
