@@ -2,5 +2,5 @@
 Hometeq Website Using PHP/HTML/CSS ;
 
 
-
-![CHEESE](WebsiteScreenshot.png);
+Screenshot of the Website;
+![CHEESE](WebsiteScreenshot.png)
