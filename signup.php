@@ -11,42 +11,42 @@ echo "<form action=signup_process.php  method=post>";
 echo "<table style='border: 0px'>";
 echo "<tr style='border: 0px'>";
 echo "<td style='border: 0px'>First Name:</td>";
-echo "<td style='border: 0px'><input type='text' name='fname'>";
+echo "<td style='border: 0px'><input type='text' name='fname' size=35>";
 echo "</tr>";
 
 echo "<tr style='border: 0px'>";
 echo "<td style='border: 0px'>Last Name:</td>";
-echo "<td style='border: 0px'><input type='text' name='lname'>";
+echo "<td style='border: 0px'><input type='text' name='lname' size=35>";
 echo "</tr>";
 
 echo "<tr style='border: 0px'>";
 echo "<td style='border: 0px'>Address:</td>";
-echo "<td style='border: 0px'><input type='text' name='address'>";
+echo "<td style='border: 0px'><input type='text' name='address' size=35>";
 echo "</tr>";
 
 echo "<tr style='border: 0px'>";
 echo "<td style='border: 0px'>Postcode:</td>";
-echo "<td style='border: 0px'><input type='text' name='postcode'>";
+echo "<td style='border: 0px'><input type='text' name='postcode' size=35>";
 echo "</tr>";
 
 echo "<tr style='border: 0px'>";
 echo "<td style='border: 0px'>Tel No:</td>";
-echo "<td style='border: 0px'><input type='text' name='tel'>";
+echo "<td style='border: 0px'><input type='text' name='tel' size=35>";
 echo "</tr>";
 
 echo "<tr style='border: 0px'>";
 echo "<td style='border: 0px'>Email Address:</td>";
-echo "<td style='border: 0px'><input type='text' name='email'>";
+echo "<td style='border: 0px'><input type='text' name='email' size=35>";
 echo "</tr>";
 
 echo "<tr style='border: 0px'>";
 echo "<td style='border: 0px'>Password:</td>";
-echo "<td style='border: 0px'><input type='password' name='password'>";
+echo "<td style='border: 0px'><input type='password' name='password' size=35>";
 echo "</tr>";
 
 echo "<tr style='border: 0px'>";
 echo "<td style='border: 0px'>Confirm Password:</td>";
-echo "<td style='border: 0px'><input type='password' name='passwordCon'>";
+echo "<td style='border: 0px'><input type='password' name='passwordCon' size=35>";
 echo "</tr>";
 
 echo "<tr style='border: 0px'>";
