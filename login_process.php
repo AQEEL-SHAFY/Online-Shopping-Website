@@ -84,30 +84,3 @@ if (empty($email) || empty($password)) {
 include("footfile.html"); //include head layout
 echo "</body>";
 
- // else {
-//         //if password retrieved from the database (in arrayu) does not match $password    
-//         if ($data['userEmail'] != $email) {
-//             //display error message "Password not recognised, login again"
-//             echo "<p>Login Failed!</p>";
-//             echo "<p>Password you entered was not recognised</p>";
-//             echo "<p>Go back to <a href='login.php'>login</a></p>";
-//         }
-// }
-//   else {
-//         //display login success message and store user id, user type, name into 4 session variables i.e.
-//         //create $_SESSION['userid'], $_SESSION['usertype'], $_SESSION['fname'], $_SESSION['sname'],
-//         $_SESSION['userid'] = $data['userId'];
-//         $_SESSION['usertype'] = $data['userType'];
-//         $_SESSION['fname'] = $data['userFName'];
-//         $_SESSION['sname'] = $data['userSName'];
-//         //Greet the user by displaying their name using $_SESSION['fname'] and $_SESSION['sname']
-//         echo "<p><b>Login Success</b></p>";
-//         echo "<p> Hello, " . $data['userFName'] . " " . $data['userSName'] . "<p>";
-//         //Welcome them as a customer by using $_SESSION['usertype '] 
-//         if ($data['userType'] == 'C') {
-//             echo "<p> You have successfully logged in as a homteq Customer<p>";
-//             echo "<p>Continue to shopping for <a href='index.php'>Home Tech</a></p>";
-//             echo "<p>Go back to <a href='basket.php'>Shopping Cart Page</a></p>";
-//         }
-//     }
-// }
