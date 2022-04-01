@@ -45,7 +45,7 @@ if (empty($email) || empty($password)) {
 {
   
     //if password retrieved from the database (in arrayu) does not match $password
-    if(!$arrayu['userPassword'] = $password)
+    if($arrayu['userPassword'] != $password)
     {
     //display error message "Password not recognised, login again"
     echo "<p><b>Login failed!</b>"; //display login error
